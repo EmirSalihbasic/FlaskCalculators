@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Black-Scholes Calculator</title>
+</head>
+
+<body>
+    <h1>Black-Scholes Calculator</h1>
+    <form action="/" method="POST">
+        <label for="stock_price">Stock Price:</label>
+        <input type="text" id="stock_price" name="stock_price"><br><br>
+
+        <label for="strike_price">Strike Price:</label>
+        <input type="text" id="strike_price" name="strike_price"><br><br>
+
+        <label for="risk_free_rate">Risk-Free Rate:</label>
+        <input type="text" id="risk_free_rate" name="risk_free_rate"><br><br>
+
+        <label for="time_to_maturity">Time to Maturity (in years):</label>
+        <input type="text" id="time_to_maturity" name="time_to_maturity"><br><br>
+
+        <label for="volatility">Volatility (in decimal form):</label>
+        <input type="text" id="volatility" name="volatility"><br><br>
+
+        <input type="submit" value="Calculate">
+    </form>
+    {% if result %}
+    <h2>Option Price: {{ result }}</h2>
+    {% endif %}
+</body>
+
+</html>
